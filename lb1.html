@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная 1</title>
+    <meta charset="utf-8">
+</head>
+<h1>Ответ:</h1>
+<body>
+    <script type="text/javascript">
+        var n = Number(prompt("Введите количество (n):"));
+        var x = Number(prompt("Введите число между -1 и 1:"));
+        var vspcisl = 1;
+        var vspznam = 1;
+        var vspc=-1;
+        var vspz=0;
+        for(var i=0;i<n;i++){
+            vspc=vspc+2;
+            vspcisl = vspcisl*vspc;
+        }        
+        for(var i=0;i<n;i++){
+            vspz=vspz+2;
+            vspznam = vspznam*vspz;
+        }        
+        var b = 0;
+        for(var a=1; a<=n; a++){
+            b=b+((vspcisl*(2*a-1)*(x**(2*a+1)))/(vspznam*(2*a)*(2*a+1)));
+        }
+        b=x+b;
+        document.writeln(b);
+    </script>
+</body>
+</html>
