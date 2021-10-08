@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная 3</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        //функция для создания массива пользователем
+        function newMas(){
+            var n = Number(prompt("Введите количество элементов:"));
+            var nMas = [];
+            for(var i=0; i<n; i++){
+                nMas[i]=Number(prompt("Введите число:"));
+            }
+            return nMas;
+        }
+
+        //функция для поиска индекса максимального элемента
+        function findIMax(arr){
+            var max=0;
+            for(var i=1; i<arr.length; i++){
+                if(arr[i]>arr[max]){
+                    max=i;
+                }
+            }
+            return max;
+        }
+
+        var myArray = newMas();
+
+        //Произведение отрицательных элементов массива
+        var proizv = 1;
+        for(var i=0; i<myArray.length; i++){
+            if(myArray[i]<0){
+                proizv*=myArray[i];
+            }
+        }
+
+        //Сумма положительных элементов массива, расположенных до максимального элемента
+
+        var IndMax = findIMax(myArray);
+        var sumPolozhEl = 0;
+        for(var m=0; m<IndMax; m++){
+            sumPolozhEl+=myArray[m];
+        }
+
+        //Массив в обратном порядке
+        myArray.reverse();
+        var str = myArray.join("; ");
+
+        document.writeln("Произведение отрицательных элементов массива: "+proizv+"; Сумма положительных элементов массива, расположенных до максимального элемента: "+sumPolozhEl+"; Массив в обратном порядке: "+str);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
