@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная 8</title>
+    <meta charset="utf-8">
+</head>
+<body style='background-color: white; color: black' class = "myBody">
+<h2><a href="https://market.yandex.ru/" class="myA">Ссылка</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas eget lacus eget condimentum. Morbi tempor interdum vulputate. Phasellus a justo et metus commodo elementum. Duis consequat nibh sit amet tincidunt gravida. Aliquam quis blandit massa. Vivamus id iaculis eros, et dapibus sapien. Sed volutpat est in nisi feugiat ornare. Nunc tristique diam non pulvinar lacinia.
+
+Vivamus luctus ex ut sapien rhoncus, in semper metus aliquam. Donec pulvinar sem at facilisis faucibus. Nunc eu ante nec eros dictum mollis. Fusce euismod ornare nulla, sed ultricies felis gravida non. Aenean vitae mi blandit, vehicula justo quis, eleifend lorem. Duis eu semper arcu, non commodo tortor. Quisque ac lorem eget augue sollicitudin sagittis. Aenean in dolor vel nunc ornare fermentum. Praesent at justo quis erat interdum hendrerit. Pellentesque molestie ultrices est vitae imperdiet. Curabitur non mattis lacus. Vestibulum suscipit tristique varius. Sed consequat, neque non pretium vestibulum, mi magna volutpat nisl, non varius sem dolor et lorem. Quisque a nibh id libero viverra pulvinar. Nulla hendrerit ex a fermentum cursus.
+
+Cras sed convallis quam. Donec id turpis eu ligula pretium maximus. Duis vel pulvinar purus. Vestibulum vitae cursus quam. Aliquam tincidunt, diam congue mattis sagittis, tellus turpis vehicula orci, id varius nisl ipsum quis velit. Nulla et lorem sed massa facilisis posuere. Praesent eu posuere magna. Donec ultricies quis lectus nec bibendum. Pellentesque porta massa a mi tempor tincidunt. Donec in est et dui posuere placerat id sit amet orci. Vivamus non nulla magna.</p>
+    <script type="text/javascript">
+        var a = prompt("Введите цвет фона сайта:");
+        var b = prompt("Введите цвет текста сайта:");
+        var c = prompt("Введите ссылку, полный адрес");
+        var bodyU = document.querySelector("body.myBody");
+        bodyU.setAttribute("style", `background-color:${a}`);
+        var root = document.documentElement;
+        root.style.color = b;
+        var ancor = document.querySelector("a.myA");
+        ancor.setAttribute("href", `${c}`);
+    </script>
+</body>
+</html>
